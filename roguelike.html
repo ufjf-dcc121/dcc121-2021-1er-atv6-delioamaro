@@ -483,6 +483,11 @@
             else{
                 elemento.classList.add('parede'); 
             }
+            elemento.addEventListener('click', tdClick, false);  
+        }
+        function tdClick(event){
+            let target = event.target;
+            console.log("Classe: ", target.classList.value)
         }
 
     </script>
