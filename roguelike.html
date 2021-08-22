@@ -478,11 +478,11 @@
         const celulas = document.querySelectorAll('td');
         for(let i=0; i<celulas.length-1; i++){
             const elemento = celulas[i];
-            if(elemento.classList.contains('orc') && elemento.classList.contains('tesouro') && elemento.classList.contains('parede')){
+            if(elemento.classList.contains('orc') || elemento.classList.contains('tesouro') || elemento.classList.contains('parede')){
             } 
             else{
                 elemento.classList.add('parede'); 
-            }  
+            }
         }
 
     </script>
