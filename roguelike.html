@@ -481,13 +481,27 @@
             if(elemento.classList.contains('orc') || elemento.classList.contains('tesouro') || elemento.classList.contains('parede')){
             } 
             else{
-                elemento.classList.add('parede'); 
+               elemento.classList.add('parede'); 
             }
             elemento.addEventListener('click', tdClick, false);  
         }
         function tdClick(event){
             let target = event.target;
             console.log("Classe: ", target.classList.value)
+            if(target.classList.contains('parede')){
+               target.classList.remove('parede');
+            }
+            else if(target.classList == ""){
+                target.classList.add('orc')
+            }
+            else if(target.classList.contains('orc')){
+                target.classList.add('tesouro');
+                target.classList.remove('orc')
+            }
+            else if(target.classList.contains('tesouro')){
+                target.classList.add('parede');
+                target.classList.remove('tesouro')
+            }
         }
 
     </script>
